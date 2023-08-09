@@ -1,6 +1,3 @@
-import logo from "../assets/logo.png";
-import portada from "../assets/logo-letras.png";
-
 export const tienda = {
   nombre: "meraki diseños",
   perfil:
@@ -22,7 +19,7 @@ export const tienda = {
   instagram: undefined,
   facebook: undefined,
   whatsapp: undefined,
-  color: "#E88BF8"
+  color: "#e88bf8"
 };
 
 export const categorias = [
@@ -35,7 +32,18 @@ export const categorias = [
           "Taza de polímero.Medidas: 9.2cm de alto. 8cm de diámtro. 3.5mm de espesor. Capacidad: 350cc.",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/taza%20polimero-53482c03.jpg",
-        precio: 780
+        precio: 780,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       },
       {
         titulo: "Remera de algodón unisex | Talle S - 3XL.",
@@ -43,7 +51,36 @@ export const categorias = [
           "Remera de algódon. Cuello redondo. Unisex.Talles: S, M, L, XL, XXL, 3XL.Colores: blanco, negro, verde, rojo y más (consultar).",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/algodonBlancaAdulto-327d567f.jpg",
-        precio: 3700
+        precio: 3700,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: true,
+            items: [
+              {
+                valor: "s",
+                stock: 1
+              },
+              {
+                valor: "m",
+                stock: 1
+              },
+              {
+                valor: "l",
+                stock: 1
+              }
+            ]
+          },
+          color: {
+            status: true,
+            items: [
+              {
+                valor: "blanca",
+                stock: 3
+              }
+            ]
+          }
+        }
       }
     ]
   },
@@ -56,7 +93,18 @@ export const categorias = [
           "Combo ponchito (azul o rosa) + Set de jardín completo (servilleta, individual, toalla con bolsillo y taza de polímero). Medidas set: servilleta (19cm x 19cm), individual (33cm x 23cm), toalla (13cm x 19cm).Talles ponchito: 4, 6, 8 y 10.",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/setPonchitoJardin-93079662.jpg",
-        precio: 3800
+        precio: 3800,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       },
       {
         titulo: "Mochila jardín reforzada + Set jardín completo",
@@ -64,7 +112,18 @@ export const categorias = [
           "Combo mochila reforzada para jardín + Set de jardín completo (servilleta, individual, toalla con bolsillo y taza de polímero). Medidas set: servilleta (19cm x 19cm), individual (33cm x 23cm), toalla (13cm x 19cm). Medidas mochila: 29cm de alto, 21cm de ancho, 9cm de profundidad.",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/setEscolarMochila-e727341f.jpg",
-        precio: 4500
+        precio: 4500,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       },
       {
         titulo: "Mochila primaria",
@@ -72,7 +131,18 @@ export const categorias = [
           "Mochila de cordura para primaria. Medidas: 42cm de alto, 29cm de ancho, 11cm de profundidad. Colores: (consultar).",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/mochila%20primaria-74e746a9.jpg",
-        precio: 2900
+        precio: 2900,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       }
     ]
   },
@@ -85,7 +155,18 @@ export const categorias = [
           "Agenda perpetua de cartón. Medida: 20cm x 14.5cm (formato A5). Detalle: 84 hojas. Calendarios 2023/2024. Incluye espiral plástico.",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/agenda2-48582b11.jpg",
-        precio: 1400
+        precio: 1400,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       },
       {
         titulo: "Anotador | A6",
@@ -93,7 +174,18 @@ export const categorias = [
           "Anotador de cartón. Medida: 14.5cm x 9.5cm (formato A6). Detalle: 100 hojas lisas. Incluye espiral plástico.",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/anotador-97bad21e.jpg",
-        precio: 860
+        precio: 860,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       },
       {
         titulo: "Cartón sublimable | A4",
@@ -101,7 +193,18 @@ export const categorias = [
           "Lámina de cartón sublimable. Medida: 29.70cm x 21cm (formato A4).",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/cartonSublimado-6d4a8fdf.jpg",
-        precio: 600
+        precio: 600,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       }
     ]
   },
@@ -114,7 +217,18 @@ export const categorias = [
           "Remera de algódon. Cuello redondo. Unisex.Talles: S, M, L, XL, XXL, 3XL.Colores: blanco, negro, verde, rojo y más (consultar).",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/algodonBlancaAdulto-327d567f.jpg",
-        precio: 3700
+        precio: 3700,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       },
       {
         titulo: "Remera de algodón unisex",
@@ -122,7 +236,18 @@ export const categorias = [
           "Remera de algódon. Cuello redondo. Unisex. Talles: 4XL, 5XL. Colores: blanco, negro, verde, rojo y más (consultar). ",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/algodonAdulto2-ce2bbef3.jpg",
-        precio: 4300
+        precio: 4300,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       },
       {
         titulo: "Remera de algodón - Niño",
@@ -130,7 +255,18 @@ export const categorias = [
           "Remera de algódon. Cuello redondo. Niño. Talles: del 2 al 16. Colores: blanco, negro, verde, rojo y más (consultar). Técnica de estampado: DTF o vinilo.",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/algodonNi%C3%B1o-80525d15.jpg",
-        precio: 3000
+        precio: 3000,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       },
       {
         titulo: "Remera de spum unisex | Blanca",
@@ -138,7 +274,18 @@ export const categorias = [
           "Remera de spum. Cuello redondo. Unisex. Talles: del 1 al 5. Colores: blanco. Técnica de estampado: sublimación.",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/spumBlancaAdulto-041b8f62.jpg",
-        precio: 1700
+        precio: 1700,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       },
       {
         titulo: "Remera de spum unisex | Blanca",
@@ -146,7 +293,18 @@ export const categorias = [
           "Remera de spum. Cuello redondo. Unisex. Talles: 6, 8 y 10. Colores: blanco. Técnica de estampado: sublimación.",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/spumBlancoAdulto2-05a464b6.jpg",
-        precio: 1900
+        precio: 1900,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       },
       {
         titulo: "Remera de spum - Dama",
@@ -154,7 +312,18 @@ export const categorias = [
           "Remera de spum. Cuello redondo. Dama. Talles: del 1 al 5. Colores: blanco. Técnica de estampado: sublimación.",
         src:
           "https://meraki-sublimacion-b2a13.web.app/assets/spumBlancoDama-f8e60f88.jpg",
-        precio: 1700
+        precio: 1700,
+        stock: 3,
+        opciones: {
+          talle: {
+            status: false,
+            items: []
+          },
+          color: {
+            status: false,
+            items: []
+          }
+        }
       }
     ]
   }

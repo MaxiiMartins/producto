@@ -16,7 +16,7 @@ function CardProduct({ openModal,destacado, titulo = "Titulo del producto",detal
                         <p style={{color:tienda.color}} className="text-sm font-medium">$&nbsp;{precio}</p>
                     </div>
                 </div>
-                <Image alt="producto" className="min-w-24 sm:min-w-36 aspect-square h-24 w-24 rounded-md bg-[#cf0000] object-cover object-center sm:h-36 sm:w-36" loading="lazy" src={src} />
+                <Image alt="producto" style={{backgroundImage:tienda.color}} className="min-w-24 sm:min-w-36 aspect-square h-24 w-24 rounded-md object-cover object-center sm:h-36 sm:w-36" loading="lazy" src={src} />
             </div>
         </div>
     )
