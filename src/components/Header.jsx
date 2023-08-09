@@ -34,7 +34,7 @@ function Header() {
     }
 
     return (
-        <div className='mb-4 flex flex-col gap-4 px-4 '>
+        <div className='mb-4 flex flex-col gap-4 sm:px-4 '>
             {/* portada */}
 
             {
