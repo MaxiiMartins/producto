@@ -39,7 +39,7 @@ function Header() {
 
             {
                 !tienda.portada.color ? (
-                    <Image src={tienda.portada.imagen} className="h-40 rounded-b-lg object-cover object-top sm:h-56" alt="portada" />
+                    <Image src={tienda.portada.imagen} className="h-40 sm:rounded-b-lg object-cover object-top sm:h-56" alt="portada" />
                 ) : (
                     <div style={{backgroundColor:tienda.color}} className={"h-40 rounded-lg object-cover sm:h-56"}></div>
                 )
@@ -60,7 +60,7 @@ function Header() {
                         <Ubicacion href={tienda.direccion} />
                     </div>          
                 </div>
-                <div style={{backgroundColor:`${tienda.color}4d`, color: tienda.color}} className={`font-medium w-full text-center text-sm sm:text-base rounded-lg my-4 px-4 py-3`}>{tienda.anuncio}</div>
+                <div style={{backgroundColor:`${tienda.color}4d`, color: tienda.color}} className={`font-medium w-full text-center text-sm sm:text-base sm:rounded-lg my-4 px-4 py-3`}>{tienda.anuncio}</div>
             </div>
         </div>
     )
