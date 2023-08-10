@@ -49,7 +49,7 @@ export function getCartMessage(cart, checkout) {
 }
 
 export function generatedWhatsappUrl ({titulo,precio,opciones}){
-  let mensaje = `Hola *${tienda.nombre.toUpperCase()}*\nQuiero realizar una compra, este es el detalle:\n 🛒 *Productos* \n *${titulo}*`;
+  let mensaje = `Hola *${tienda.nombre.toUpperCase()}*\nQuiero realizar una compra, este es el detalle:\n *Productos* \n *${titulo}*`;
   if (opciones.talle.status) {
       mensaje += `\n Talle ${opciones.talle.items[0].valor.toUpperCase()}`;
   }

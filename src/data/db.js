@@ -2,7 +2,7 @@ export const tienda = {
   nombre: "meraki diseños",
   perfil:
     "https://meraki-sublimacion-b2a13.web.app/assets/merakilogoz-a3834733.png",
-  direccion: undefined,
+  direccion: "https://maps.google.com/",
   portada: {
     color: false,
     imagen:
@@ -16,7 +16,7 @@ export const tienda = {
     efectivo: false,
     transferencia: false
   },
-  instagram: undefined,
+  instagram: "https://www.instagram.com/",
   facebook: undefined,
   whatsapp: 5492216387936,
   color: "#e88bf8"
