@@ -9,6 +9,7 @@ import { useProductsContext } from "../context/ProductsContext";
 import { categorias } from "../data/db";
 import SearchInput from './SearchInput';
 import SkeletonCardProduct from './SkeletonListProducts';
+import Probando from './Probando';
 
 function Main() {
     const { isOpen } = useModalContext()
@@ -40,7 +41,8 @@ function Main() {
                 </div>
                 <Cart />
             </div>
-            {isOpen && <Modal />}
+            {/* {isOpen && <Modal />} */}
+            {isOpen && <Probando />}
 
         </main>
     )
