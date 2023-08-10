@@ -18,7 +18,7 @@ export const tienda = {
   },
   instagram: undefined,
   facebook: undefined,
-  whatsapp: undefined,
+  whatsapp: 5492216387936,
   color: "#e88bf8"
 };
 

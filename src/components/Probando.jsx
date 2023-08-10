@@ -23,16 +23,15 @@ function Probando() {
     }, 150);
 
     return (
-        <div className="min-h-screen min-w-full bg-black/30 backdrop-blur-sm fixed z-[999999999] flex flex-col sm:justify-center justify-start items-center top-0 bottom-0 left-0 sm:p-4">
-
+        <div className="min-h-screen min-w-full bg-black/30 overflow-hidden py-4 backdrop-blur-sm fixed z-[99999] flex flex-col sm:justify-center justify-start items-center top-0 bottom-0 left-0 sm:p-4">
             <div
-                className={`bg-white fixed z-50 duration-100 transition-all ease-linear ${d ? "translate-x-0 sm:scale-100" : "translate-x-[30rem] sm:translate-x-0 sm:scale-0"} gap-4 opacity-100 shadow-lg h-full duration-300 w-full max-w-[500px] sm:w-1/4 sm:min-w-[480px] grid grid-rows-[auto_1fr_auto]`}
-                style={{ pointerEvents: "auto" }}
+                className={`bg-white fixed z-[999999] duration-100 transition-all ease-linear ${d ? "translate-x-0 sm:scale-100" : "translate-x-[30rem] sm:translate-x-0 sm:scale-0"} gap-4 opacity-100 rounded-md shadow-lg h-full duration-300 w-full max-w-[500px] sm:w-1/4 sm:min-w-[480px] grid grid-rows-[auto_1fr_auto]`}
+                
             >
                 <div onClick={closeAnimation} className="flex flex-col relative h-12 w-14 group gap-y-2 text-center sm:text-left z-20">
                     <button
                         type="button"
-                        className="bg-white transition-opacity absolute focus:outline-none disabled:pointer-events-none ml-auto h-12 w-14 rounded-r-lg border mt-4 py-2 pl-2 pr-4 shadow-lg"
+                        className="bg-white transition-opacity absolute focus:outline-none disabled:pointer-events-none ml-auto rounded-r-lg border mt-4 p-3 shadow-lg"
                     >
                         <svg
 
@@ -53,7 +52,7 @@ function Probando() {
                     </button>
                 </div>
                 <div className="overflow-y-auto -mt-16">
-                    <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-4 sm:gap-8">
                         <div className="flex flex-col gap-2">
                             <Image
                                 onClick={() => setMs(true)} style={{ backgroundColor: tienda.color, transition: "transform 0.5s ease" }} src={oneProduct.src} alt={oneProduct.titulo}
@@ -72,12 +71,12 @@ function Probando() {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex flex-col gap-8">
+                        <div className="flex flex-col gap-4 sm:gap-8">
                             <Options opciones={oneProduct.opciones} />
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col-reverse sm:flex-row p-4 sm:justify-end sm:gap-x-2">
+                <div className="flex flex-col sm:flex-row p-4 sm:justify-center sm:gap-x-2">
                     <div className="flex w-full flex-col gap-4">
                         <hr />
                         <div style={{ color: tienda.color }} className="flex items-center justify-between text-lg font-medium">
