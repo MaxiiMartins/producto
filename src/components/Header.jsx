@@ -34,7 +34,7 @@ function Header() {
     }
 
     return (
-        <div className='mb-4 flex flex-col gap-4 px-4 '>
+        <div className='mb-4 flex flex-col gap-4 sm:px-4 '>
             {/* portada */}
 
             {
@@ -49,10 +49,10 @@ function Header() {
                 <div className="-mt-20 rounded-full p-1 ">
                     <Image alt={`logo de ${tienda.nombre}`} style={{backgroundColor:tienda.color}} className="h-40 w-40 min-w-[128px] rounded-full border-8 border-white" src={tienda.perfil} />
                 </div>
-                <div className="flex flex-col items-center gap-4 text-center ">
+                <div className="flex flex-col items-center gap-4 text-center">
                     <div className="flex flex-col gap-1">
                         <p className="text-3xl font-bold uppercase sm:text-4xl">{tienda.nombre}</p>
-                        <p className="font-medium text-black/40">{tienda.descripcion}</p>
+                        <p className="font-medium text-sm sm:text-base text-black/40">{tienda.descripcion}</p>
                     </div>
                     <div className="flex gap-2">
                         <Instagram href={tienda.instagram} />

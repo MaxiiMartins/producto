@@ -8,9 +8,11 @@ import { useProductsContext } from "../context/ProductsContext";
 
 import { categorias } from "../data/db";
 import SearchInput from './SearchInput';
+import SkeletonCardProduct from './SkeletonListProducts';
 
 function Main() {
     const { isOpen } = useModalContext()
+    const loading = false
     const { category } = useProductsContext()
     return (
         <main className='px-4'>
@@ -21,15 +23,20 @@ function Main() {
                 </div>
                 <div className='flex flex-col'>
                     {
-                        !category?.length ? (
+                        loading ? (
+                            <>
+                                <SkeletonCardProduct />
+                                <SkeletonCardProduct />
+                            </>
+                        ) : (!category?.length ? (
                             <div className="my-12 flex flex-col gap-4">
                                 <h2 className="text-center text-xl text-black/60">No hay productos</h2>
                             </div>
                         ) : (
-                            category.map((element,index) => (
+                            category.map((element, index) => (
                                 <ListProducts key={index} categoria={element} />
                             ))
-                        )
+                        ))
                     }
                 </div>
                 <Cart />

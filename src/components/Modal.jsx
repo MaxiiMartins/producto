@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useModalContext } from "../context/ModalContext"
 import Image from './Image';
-import imagenPrueba from "../assets/logo-letras.png"
 import { useProductsContext } from "../context/ProductsContext";
 import { tienda } from "../data/db";
 import Options from './Options';

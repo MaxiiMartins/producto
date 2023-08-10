@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import CardProduct from "./CardProduct"
 import { useModalContext } from "../context/ModalContext"
 import { useProductsContext } from "../context/ProductsContext"
