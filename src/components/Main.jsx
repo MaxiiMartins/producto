@@ -12,8 +12,7 @@ import SkeletonCardProduct from './SkeletonListProducts';
 
 function Main() {
     const { isOpen } = useModalContext()
-    const loading = false
-    const { category } = useProductsContext()
+    const { category, loading } = useProductsContext()
     return (
         <main className='px-4'>
             <div className='flex flex-col h-full'>
@@ -29,8 +28,8 @@ function Main() {
                                 <SkeletonCardProduct />
                             </>
                         ) : (!category?.length ? (
-                            <div className="my-12 flex flex-col gap-4">
-                                <h2 className="text-center text-xl text-black/60">No hay productos</h2>
+                            <div className="my-12 flex flex-col justify-center items-center gap-4 h-[300px]">
+                                <h2 className="text-center text-xl font-medium text-black/30">No se encontraron productos</h2>
                             </div>
                         ) : (
                             category.map((element, index) => (

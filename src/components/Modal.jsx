@@ -49,7 +49,7 @@ function Modal() {
         <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:gap-x-2">
           <div className="flex w-full flex-col justify-end gap-4 p-4">
             <hr />
-            <div className="flex items-center justify-between text-lg font-medium">
+            <div style={{color:tienda.color}} className="flex items-center justify-between text-lg font-medium">
               <p>Precio</p>
               <p>$&nbsp;{oneProduct.precio}</p>
             </div>

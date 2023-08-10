@@ -3,7 +3,7 @@ function SkeletonListProducts() {
     return (
         <div className="flex flex-col gap-4 border-t py-4 sm:gap-8 sm:py-8">
             <div className="flex items-center justify-between gap-4">
-                <div className="w-24 h-2 sm:h-4 bg-gray-200 rounded-lg animate-pulse"></div>
+                <div className="w-28 h-1 sm:h-4 py-2 bg-gray-200 rounded-lg animate-pulse"></div>
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {

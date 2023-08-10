@@ -27,7 +27,7 @@ export const categorias = [
     nombre: `Destacados `,
     productos: [
       {
-        titulo: "Taza | Polímero",
+        titulo: "Taza",
         detalle:
           "Taza de polímero.Medidas: 9.2cm de alto. 8cm de diámtro. 3.5mm de espesor. Capacidad: 350cc.",
         src:
@@ -46,7 +46,7 @@ export const categorias = [
         }
       },
       {
-        titulo: "Remera de algodón unisex | Talle S - 3XL.",
+        titulo: "Remera de algodón unisex",
         detalle:
           "Remera de algódon. Cuello redondo. Unisex.Talles: S, M, L, XL, XXL, 3XL.Colores: blanco, negro, verde, rojo y más (consultar).",
         src:
