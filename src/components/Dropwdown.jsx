@@ -13,7 +13,7 @@ function Dropwdown({ opciones = [] }) {
     }
     return (
         <div className="relative flex flex-col h-10 items-center w-44 rounded-md border gap-2 text-black/60 font-semibold">
-            <button onClick={() => setIsOpen(!isOpen)} type="button" className="bg-white p-4 w-full h-full flex rounded-md items-center justify-between tracking-wider font-medium">
+            <button onClick={() => setIsOpen(!isOpen)} type="button" className="bg-white p-4 w-full h-full text-[15px] gap-1 flex rounded-md items-center justify-between tracking-wider font-medium">
                 Categoria
                 {
                     isOpen ? (
@@ -25,7 +25,7 @@ function Dropwdown({ opciones = [] }) {
             </button>
             {
                 isOpen && opciones.length ? (
-                    <div className="bg-white border -mt-1 rounded-md flex flex-col item-start w-full">
+                    <div className="bg-white border -mt-1 rounded-md flex flex-col item-start w-full tracking-wider font-medium text-sm">
                         <div onClick={()=>handleClick("todos")} id={"todos"} onMouseLeave={() => setIsHover("")} onMouseEnter={(e) => setIsHover(e.target.id)} style={{ backgroundColor: isHover === "todos" ? `${tienda.color}4d` : "transparent" }} className={`flex w-full p-2 hover:cursor-pointer rounded-t-md`}>
                             <h2>Todos</h2>
                         </div>

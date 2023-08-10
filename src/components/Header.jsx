@@ -56,7 +56,7 @@ function Header() {
             {/* info de la tienda */}
             <div className="flex flex-col items-center gap-2 ">
                 <div className="-mt-20 rounded-full p-1 ">
-                    <Image alt={`logo de ${tienda.nombre}`} style={{ backgroundColor: tienda.color }} className="h-40 w-40 min-w-[128px] rounded-full border-8 border-white" src={tienda.perfil} />
+                    <Image alt={`logo de ${tienda.nombre}`} style={{ backgroundColor: tienda.color }} className="h-32 sm:h-40 w-32 sm:w-40 min-w-[128px] rounded-full border-8 border-white" src={tienda.perfil} />
                 </div>
                 <div className="flex flex-col items-center gap-4 text-center">
                     <div className="flex flex-col gap-1">

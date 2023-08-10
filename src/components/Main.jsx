@@ -13,7 +13,7 @@ function Main() {
     return (
         <main className='px-4 mb-4'>
             <div className='flex flex-col h-full'>
-                <div className='sticky top-0 z-10 mb-2 flex items-center justify-between gap-4 bg-white py-2 sm:py-2'>
+                <div className='sticky top-0 z-10 mb-2 flex items-center justify-between gap-4 bg-white py-4 sm:py-2'>
                     <SearchInput />
                     <Dropwdown opciones={categorias.map((ele) => ele.nombre.trim())} />
                 </div>

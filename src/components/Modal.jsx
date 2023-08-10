@@ -25,7 +25,7 @@ function Modal() {
   }, 150);
 
   return (
-    <div className="min-h-screen min-w-full overflow-hidden bg-black/30 backdrop-blur-sm fixed z-[999999999] flex flex-col sm:justify-center justify-start items-center top-0 bottom-0 left-0 sm:p-4">
+    <div className="min-h-[100dvh] min-w-full overflow-hidden bg-black/30 backdrop-blur-sm fixed z-[999999999] flex flex-col sm:justify-center justify-start items-center top-0 bottom-0 left-0 sm:p-4">
       <div className={`bg-white w-full sm:w-[50%] max-h-full h-full sm:h-auto z-50 duration-100 transition-all ease-linear ${d ? "translate-x-0 sm:scale-100" : "translate-x-[30rem] sm:translate-x-0 sm:scale-0"} sm:rounded-2xl overflow-hidden shadow-lg grid grid-rows-[auto_1fr_auto]`}>
         {/* header */}
         <div onClick={closeAnimation} className="flex z-20 absolute group bg-white shadow-sm shadow-black cursor-pointer flex-row shrink-0 items-center left-0 my-4 p-4 rounded-r-lg border-b" >
@@ -34,11 +34,11 @@ function Modal() {
           </button>
         </div>
         {/* descripcion producto */}
-        <div className="overflow-y-auto h-full">
+        <div className="overflow-y-auto">
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-2">
-                <div className="h-[240px] w-full sm:h-[400px] overflow-hidden relative">
-                  <Image onClick={() => setMs(true)} style={{ backgroundColor: tienda.color }} src={oneProduct.src} alt={oneProduct.titulo} className="h-full w-full absolute -z-0 cursor-zoom-in object-cover object-center sm:h-full" />
+                <div className="h-[450px] w-full sm:h-[400px] overflow-hidden relative">
+                  <Image onClick={() => setMs(true)} style={{ backgroundColor: tienda.color }} src={oneProduct.src} alt={oneProduct.titulo} className=" w-full absolute -z-0 cursor-zoom-in object-cover sm:h-full" />
                 </div>
                 <h2 className="px-4 text-2xl font-medium">{oneProduct.titulo}</h2>
                 <p className="px-4 text-md whitespace-pre-wrap text-black/50 italic sm:text-lg">{oneProduct.detalle}</p>
@@ -64,7 +64,7 @@ function Modal() {
       </div>
       {
         ms ? (
-          <div onClick={() => setMs(false)} className="min-h-screen min-w-full bg-black/80 backdrop-blur-2xl fixed z-[999999999] flex flex-col sm:justify-center justify-start items-center top-0 bottom-0 left-0 ">
+          <div onClick={() => setMs(false)} className="min-h-[100dvh] min-w-full bg-black/80 backdrop-blur-2xl fixed z-[999999999] flex flex-col sm:justify-center justify-start items-center top-0 bottom-0 left-0 ">
             <svg className="fill-white hover:fill-[#ff0000] absolute right-0 top-0 w-8 h-8 m-10 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" ><path d="M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z" /></svg>
             <Image style={{ backgroundColor: tienda.color + "40", transition: "transform 0.5s ease" }} src={oneProduct.src} alt={oneProduct.titulo} className="h-full w-full cursor-zoom-out object-contain sm:h-full" />
           </div>

@@ -56,7 +56,9 @@ export function generatedWhatsappUrl ({titulo,precio,opciones}){
   if (opciones.color.status) {
       mensaje += `\n Color ${opciones.color.items[0].valor.toUpperCase()}`;
   }
-  mensaje += `\n Total *${parseCurrency(precio)}*`
+  mensaje += `\n Cantidad x1`
+
+  mensaje += `\n *Total ${parseCurrency(precio)}*`
   // mensaje += `\nStock: ${stock}`;
   return `https://wa.me/${tienda.whatsapp}?text=${encodeURIComponent(mensaje)}`
 }
