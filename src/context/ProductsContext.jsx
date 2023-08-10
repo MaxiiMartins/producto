@@ -4,35 +4,6 @@ import { categorias } from "../data/db";
 
 export const ProductsContext = createContext();
 
-function obtenerTextoProductosQueCoinciden(datos, frase) {
-    const mensajes = [];
-
-    datos.forEach(elemento => {
-        const productosCoincidentes = elemento.productos.filter(producto =>
-            producto.titulo.trim().toLowerCase().includes(frase.toLowerCase().trim())
-        );
-
-        if (productosCoincidentes.length > 0) {
-            productosCoincidentes.forEach(producto => {
-                let mensaje = `${producto.titulo}\nPrecio: $${producto.precio}`;
-
-                if (producto.opciones.talle.status) {
-                    mensaje += `\nTalle: ${producto.opciones.talle.items[0].valor.toUpperCase()}`;
-                }
-
-                if (producto.opciones.color.status) {
-                    mensaje += `\nColor: ${producto.opciones.color.items[0].valor.toUpperCase()}`;
-                }
-
-                mensaje += `\nStock: ${producto.stock}`;
-
-                mensajes.push({ categoria: elemento.nombre, mensaje });
-            });
-        }
-    });
-
-    return mensajes;
-}
 
 export function ProductsContextProvider({ children }) {
     const [category, setCategory] = useState([])
@@ -71,11 +42,6 @@ export function ProductsContextProvider({ children }) {
     }
 
     useEffect(() => {
-        const data = obtenerTextoProductosQueCoinciden([...categorias],"")
-        data.forEach(mensaje => {
-            
-            console.log(`https://wa.me/5492213174726?text=${encodeURIComponent(mensaje.mensaje)}`);
-        });
         setCategory([...categorias])
         setTimeout(() => {
             setLoading(false)
