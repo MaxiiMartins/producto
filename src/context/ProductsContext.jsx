@@ -8,13 +8,14 @@ export const ProductsContext = createContext();
 export function ProductsContextProvider({ children }) {
     const [category, setCategory] = useState([])
     const [loading, setLoading] = useState(true)
+    const [loadingCategory, setLoadingCategory] = useState(false)
     const [oneProduct, setOneProduct] = useState(false)
     const filterCategory = (value) => {
-        setLoading(true)
+        setLoadingCategory(true)
         const stateFilter = [...categorias]
         setCategory(value === "todos" ? stateFilter : stateFilter.filter(ele => ele.nombre.trim() === value.trim()))
         setTimeout(() => {
-            setLoading(false)
+            setLoadingCategory(false)
         }, 500);
     }
     const selectedProduct = (value) => setOneProduct(value)
@@ -33,11 +34,11 @@ export function ProductsContextProvider({ children }) {
     }
 
     const searchProductPerCategory = (value) => {
-        setLoading(true)
+        setLoadingCategory(true)
         const allProducts = [...categorias]
         setCategory(filtrarProductosPorFrase(allProducts, value))
         setTimeout(() => {
-            setLoading(false)
+            setLoadingCategory(false)
         }, 500);
     }
 
@@ -45,12 +46,12 @@ export function ProductsContextProvider({ children }) {
         setCategory([...categorias])
         setTimeout(() => {
             setLoading(false)
-        }, 500);
+        }, 4000);
     }, [categorias])
 
 
     return (
-        <ProductsContext.Provider value={{ category, loading, filterCategory, selectedProduct, cleanSelectedProduct, oneProduct, searchProductPerCategory }}>
+        <ProductsContext.Provider value={{ category, loading,loadingCategory, filterCategory, selectedProduct, cleanSelectedProduct, oneProduct, searchProductPerCategory }}>
             {children}
         </ProductsContext.Provider>
     )

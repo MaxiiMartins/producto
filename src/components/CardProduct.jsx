@@ -4,7 +4,7 @@ import { parseCurrency } from '../utils/parseCurrency'
 import Image from './Image'
 
 
-function CardProduct({ openModal,destacado, titulo = "Titulo del producto",detalle="Descripcion del producto", src = "", precio = 0 }) {
+function CardProduct({ openModal = ()=>{},destacado = false, titulo = "Titulo del producto",detalle="Descripcion del producto", src = "", precio = 0 }) {
     return (
         <div onClick={openModal} style={{borderColor:destacado?tienda.color:""}} className="border-gray-200 flex cursor-pointer items-center justify-between gap-3 rounded-md border">
             <div className="flex h-full w-full gap-4 p-4">

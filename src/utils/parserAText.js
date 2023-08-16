@@ -51,14 +51,14 @@ export function getCartMessage(cart, checkout) {
 export function generatedWhatsappUrl ({titulo,precio,opciones}){
   let mensaje = `Hola *${tienda.nombre.toUpperCase()}*\nQuiero realizar una compra, este es el detalle:\n *Productos* \n *${titulo}*`;
   if (opciones.talle.status) {
-      mensaje += `\n Talle ${opciones.talle.items[0].valor.toUpperCase()}`;
+      mensaje += `\n Talle *${opciones.talle.items[0].valor.toUpperCase()}*`;
   }
   if (opciones.color.status) {
-      mensaje += `\n Color ${opciones.color.items[0].valor.toUpperCase()}`;
+      mensaje += `\n Color *${opciones.color.items[0].valor.toUpperCase()}*`;
   }
-  mensaje += `\n Cantidad x1`
+  mensaje += `\n Cantidad 1`
 
-  mensaje += `\n *Total ${parseCurrency(precio)}*`
+  mensaje += `\n*TOTAL ${parseCurrency(precio)}*`
   // mensaje += `\nStock: ${stock}`;
   return `https://wa.me/${tienda.whatsapp}?text=${encodeURIComponent(mensaje)}`
 }

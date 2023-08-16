@@ -3,18 +3,20 @@ import { useState } from "react"
 import { tienda } from './../data/db';
 import { useProductsContext } from "../context/ProductsContext";
 
-function Dropwdown({ opciones = [] }) {
+function Dropwdown({ opciones = [], label = "" }) {
     const { filterCategory } = useProductsContext()
     const [isOpen, setIsOpen] = useState(false)
     const [isHover, setIsHover] = useState("")
+    const [select, setSelect] = useState(label.trim())
     const handleClick = (value) => {
-        filterCategory(value)
+        label.trim().toLowerCase() === "categorias" && filterCategory(value)
+        setSelect(value === "todos" ? label.trim():value.trim())
         setIsOpen(false)
     }
     return (
-        <div className="relative flex flex-col h-10 items-center w-44 rounded-md border gap-2 text-black/60 font-semibold">
-            <button onClick={() => setIsOpen(!isOpen)} type="button" className="bg-white p-4 w-full h-full text-[15px] gap-1 flex rounded-md items-center justify-between tracking-wider font-medium">
-                Categoria
+        <div className="relative flex flex-col h-10 items-center rounded-md border gap-2 text-black/60 font-semibold">
+            <button onClick={() => setIsOpen(!isOpen)} type="button" className="bg-white capitalize p-4 w-full h-full text-[15px] gap-1 flex rounded-md items-center justify-between tracking-wider font-medium">
+                {select ||label}
                 {
                     isOpen ? (
                         <svg style={{ fill: tienda.color }} strokeWidth="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M858.9 689L530.5 308.2c-9.4-10.9-27.5-10.9-37 0L165.1 689c-12.2 14.2-1.2 35 18.5 35h656.8c19.7 0 30.7-20.8 18.5-35z"></path></svg>
@@ -31,7 +33,7 @@ function Dropwdown({ opciones = [] }) {
                         </div>
                         {opciones?.map((ele, index) => (
                             <div onClick={()=>handleClick(ele)} id={ele} onMouseLeave={() => setIsHover("")} onMouseEnter={(e) => setIsHover(e.target.id)} style={{ backgroundColor: isHover === ele ? `${tienda.color}4d` : "transparent" }} className={`flex w-full p-2 hover:cursor-pointer ${index === (opciones.length - 1) ? "rounded-b-md" : ""}`} key={index}>
-                                <h2>{ele}</h2>
+                                <h2 className="capitalize">{ele}</h2>
                             </div>
                         ))}
                     </div>
